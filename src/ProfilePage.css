@@ -1,0 +1,76 @@
+.profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.profile-header {
+    background-color: #FFF;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 0 auto 20px auto;
+    background-image: url('https://fightonline.usc.edu/Alumni/servlet/rtaImage?eid=a1UQi000000JvnN&feoid=00N1Y00000IrhtI&refid=0EMQi000002a4AP');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.profile-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.profile-rating {
+    font-size: 1rem;
+    color: #777;
+    margin: 5px 0;
+}
+
+.create-post-btn {
+    margin-top: 15px;
+    background-color: #990000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 6px;
+    color: white;
+}
+
+.create-post-btn:hover {
+    background-color: #b30000;
+}
+
+.history-section {
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.history-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+.post-history-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.post-history-item {
+    font-size: 1.1rem;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    color: #444;
+}

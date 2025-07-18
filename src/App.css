@@ -1,0 +1,198 @@
+body {
+    background-color: #F8F9FA;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.home-banner {
+    background-image: url('https://www.icolorpalette.com/download/solidcolorimage/990010_solid_color_background_icolorpalette.png');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.page-banner {
+    background-color: #990000;
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.page-banner h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #FFC72C;
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.page-banner .container {
+    padding: 0;
+    width: 100%;
+}
+
+.container {
+    padding: 20px;
+}
+
+.home-banner .container {
+    position: relative;
+    z-index: 1;
+}
+
+.home-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #FFC72C;
+    margin-bottom: 20px;
+}
+
+.home-subtitle {
+    font-size: 1.25rem;
+    color: #F0F0F0;
+    line-height: 1.6;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    padding: 1rem;
+    background-color: #FFC72C;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-link {
+    color: #333;
+    font-size: 1.1rem;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.category-btn {
+    border-radius: 0px;
+    padding: 15px 32px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    color: #333;
+    border: 1px solid #333;
+    background-color: white;
+    border-color: #333;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.category-btn:hover {
+    background-color: #990000;
+    color: white;
+    border-color: #990000;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.products {
+    margin-top: 20px;
+}
+
+.product-card {
+    background-color: #FFF;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+  
+.product-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0;
+}
+  
+.product-price {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.product-rating {
+    font-size: 1rem;
+    color: #777;
+}
+
+.btn-cardinal {
+    background-color: #990000;
+    border-color: #990000;
+    color: white;
+  }
+  
+  .btn-cardinal:hover {
+    background-color: #7a0000;
+    border-color: #7a0000;
+  }
+
+  .interest-form-container {
+    max-width: 1280px; 
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .interest-form-container input,
+  .interest-form-container textarea {
+    width: 100%; 
+  }
+  
+  .interest-form-container h5 {
+    margin-bottom: 20px;
+  }
+
+  .product-image {
+    max-width: 200px; 
+    height: auto;   
+    margin: 0 auto;  
+    display: block;   
+    object-fit: contain; 
+}
