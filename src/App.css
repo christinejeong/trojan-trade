@@ -197,25 +197,28 @@ h2 {
     object-fit: contain; 
 }
 
-/* Make product cards equal height */
-.product-card {
+/* Force consistent image size */
+.product-image {
+    width: 100%;
+    height: 200px;       /* Fixed height */
+    object-fit: contain; /* Keeps image ratio, fits nicely */
+    border-radius: 10px;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  /* Ensure all product cards are same height */
+  .product-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+    justify-content: flex-start;
+    align-items: center;  /* Center content */
+    height: 100%;         /* Take full available height */
+    min-height: 350px;    /* Adjust based on design */
     padding: 15px;
     background-color: #fff;
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-  }
-  
-  /* Force consistent image size */
-  .product-image {
-    width: 100%;
-    height: 200px;     
-    object-fit: cover;  
-    border-radius: 10px;
-    margin-bottom: 8px;
   }
   
