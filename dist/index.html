@@ -2,13 +2,333 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-Commerce Website</title>
-    <script type="module" crossorigin src="./index-wi_ZPgFT.js"></script>
-    <link rel="stylesheet" crossorigin href="./index-CxweTNQf.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#8d282e" />
+    <meta
+      name="description"
+      content="Trojan Trade: a student marketplace concept for buying, selling, and renting secondhand essentials within the USC community."
+    />
+    <title>Trojan Trade — Good finds. Great neighbors.</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
   </head>
   <body>
-    <div id="root"></div>
+    <a class="skip-link" href="#marketplace">Skip to marketplace</a>
+    <div class="project-bar">
+      <a href="https://christinejeong.github.io/Portfolio/portfolio.html#projects">← Christine's portfolio</a
+      ><span>Student marketplace · Interactive demo</span>
+    </div>
+    <header class="site-header wrap">
+      <a class="brand" href="index.html" aria-label="Trojan Trade home"
+        ><span class="brand-mark" aria-hidden="true">tt.</span
+        ><span
+          >trojan<span class="brand-light">trade</span
+          ><small>ONE CAMPUS. MORE POSSIBILITIES.</small></span
+        ></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#marketplace" class="browse-link">Explore</a
+        ><button class="text-button" data-open="about-dialog">
+          How it works</button
+        ><button id="saved-toggle" class="saved-button" aria-pressed="false">
+          <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.3 5.7a5.1 5.1 0 0 0-7.2 0L12 6.8l-1.1-1.1a5.1 5.1 0 0 0-7.2 7.2l7.6 7.1a1 1 0 0 0 1.4 0l7.6-7.1a5.1 5.1 0 0 0 0-7.2Z"/></svg> Saved
+          <span id="saved-count">0</span></button
+        ><button class="button primary" data-open="listing-dialog">
+          <span aria-hidden="true">+</span> List an item
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="little-star" aria-hidden="true">✳</span> THE USC
+            COMMUNITY MARKETPLACE
+          </p>
+          <h1 id="hero-title">Good finds.<br />Great <em>neighbors.</em></h1>
+          <p class="hero-description">
+            For your next chapter, or just your next class.<br />Buy, sell, and
+            rent preloved essentials with fellow Trojans.
+          </p>
+          <div class="hero-actions">
+            <a href="#marketplace" class="button primary"
+              >Find your next favorite <span aria-hidden="true">↗</span></a
+            ><button class="text-button" data-open="listing-dialog">
+              Have something to pass on? →
+            </button>
+          </div>
+          <div class="hero-note">
+            <span class="note-line"></span> Less spending. Less waste. More
+            community.
+          </div>
+        </div>
+        <div
+          class="hero-art"
+          aria-label="A preloved chair and textbooks ready for their next home"
+        >
+          <div class="art-orbit" aria-hidden="true"></div>
+          <span class="art-caption">A LITTLE OLD.<br />A LOT TO LOVE.</span>
+          <div class="hero-chair">
+            <span class="tiny-label">YOUR NEW STUDY SPOT</span
+            ><img
+              src="assets/chair.webp"
+              alt="Wooden accent chair with a woven seat"
+            />
+            <div>
+              <span
+                >One good chair.<br /><strong
+                  >A whole new chapter.</strong
+                ></span
+              ><span class="round-arrow" aria-hidden="true">↗</span>
+            </div>
+          </div>
+          <div class="book-sticker">
+            <img
+              src="assets/books.svg"
+              alt="Stack of secondhand textbooks"
+            /><span>Big ideas. Small prices.</span>
+          </div>
+          <div class="circular-note" aria-hidden="true">
+            PASS IT ON<br /><span>↻</span><br />TROJAN TO TROJAN
+          </div>
+          <span class="art-spark" aria-hidden="true">✳</span>
+        </div>
+      </section>
+      <div class="values-strip">
+        <div class="wrap">
+          <span><b>01</b> Made for campus life</span
+          ><span><b>02</b> Secondhand, first choice</span
+          ><span><b>03</b> Buy it. Borrow it. Pass it on.</span>
+        </div>
+      </div>
+      <section
+        id="marketplace"
+        class="marketplace wrap"
+        aria-labelledby="market-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE CAMPUS EDIT</p>
+            <h2 id="market-title">Your next good find.</h2>
+          </div>
+          <p>
+            From move-in day to finals week.<br />Find what you need, close to
+            home.
+          </p>
+        </div>
+        <div class="search-row">
+          <label class="search-box"
+            ><svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              aria-hidden="true"
+            >
+              <circle cx="10.5" cy="10.5" r="6.5" />
+              <path d="m16 16 5 5" /></svg
+            ><span class="sr-only">Search listings</span
+            ><input
+              id="search"
+              type="search"
+              placeholder="Try “textbook”, “chair”, or “camera”…"
+              autocomplete="off"
+            /><span class="search-hint"
+              >A little search goes a long way</span
+            ></label
+          >
+          <div class="mode-toggle" aria-label="Listing type">
+            <button data-mode="all" aria-pressed="true">All finds</button
+            ><button data-mode="buy" aria-pressed="false">To buy</button
+            ><button data-mode="rent" aria-pressed="false">To rent</button>
+          </div>
+        </div>
+        <div class="filter-row">
+          <div class="categories" aria-label="Categories">
+            <button data-category="All" aria-pressed="true">All items</button
+            ><button data-category="Textbooks" aria-pressed="false">
+              Textbooks</button
+            ><button data-category="Furniture" aria-pressed="false">
+              Furniture</button
+            ><button data-category="Electronics" aria-pressed="false">
+              Electronics</button
+            ><button data-category="Everyday" aria-pressed="false">
+              Everyday essentials
+            </button>
+          </div>
+          <label class="sort-label"
+            >Sort by
+            <select id="sort">
+              <option value="newest">Newest finds</option>
+              <option value="low">Price: low to high</option>
+              <option value="high">Price: high to low</option>
+            </select></label
+          >
+        </div>
+        <div class="results-row">
+          <p id="result-count" role="status" aria-live="polite"></p>
+          <span>Sample listings · No real transactions</span>
+        </div>
+        <div id="product-grid" class="product-grid"></div>
+        <div id="empty-state" class="empty-state" hidden>
+          <span aria-hidden="true">⌕</span>
+          <h3>No finds just yet.</h3>
+          <p id="empty-copy">
+            Try a different search or give another category a look.
+          </p>
+          <button id="reset-filters" class="button primary">
+            Explore all items
+          </button>
+        </div>
+        <p class="rental-note">
+          Rental prices are per day. Purchase and rental prices are sorted by
+          the amount shown.
+        </p>
+      </section>
+      <section class="pass-on wrap">
+        <div>
+          <p class="eyebrow">STILL GOOD. JUST NOT YOURS ANYMORE.</p>
+          <h2>Someone on campus<br />needs what you don't.</h2>
+          <p>
+            That extra chair. Last semester's books. The camera you rarely
+            use.<br />Make a little room. Make someone's day.
+          </p>
+          <button class="button primary" data-open="listing-dialog">
+            Give it a next chapter <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+        <div class="pass-art" aria-hidden="true">
+          <span>yours</span><span class="pass-arrow">⤳</span><span>theirs</span
+          ><small>GOOD THINGS KEEP GOING.</small>
+        </div>
+      </section>
+    </main>
+    <footer class="wrap">
+      <a class="footer-brand" href="index.html"
+        >trojantrade<span> A little closer. A little more circular.</span></a
+      >
+      <div>
+        <button class="text-button" data-open="about-dialog">
+          About the project ↗
+        </button>
+        <p>Student-designed concept. Not affiliated with USC.</p>
+      </div>
+    </footer>
+    <dialog id="about-dialog" aria-labelledby="about-title">
+      <button class="close-dialog" aria-label="Close dialog">×</button>
+      <p class="eyebrow">ONE CAMPUS. ONE COMMUNITY.</p>
+      <h2 id="about-title">A better way to pass it on.</h2>
+      <p>
+        Trojan Trade is a peer-to-peer resale platform concept for current USC
+        students to buy, sell, and rent secondhand textbooks, furniture,
+        electronics, and everyday essentials.
+      </p>
+      <div class="steps">
+        <p>
+          <b>01 · Find your fit</b>Explore by category, search for an essential,
+          or browse rentals for the things you only need for a little while.
+        </p>
+        <p>
+          <b>02 · Connect on campus</b>The intended experience connects students
+          to discuss condition, availability, and a convenient public pickup
+          spot.
+        </p>
+        <p>
+          <b>03 · Keep good things going</b>Spend less on what you need and earn
+          from belongings you're ready to share or pass on.
+        </p>
+      </div>
+      <div class="demo-note">
+        This portfolio demo uses sample listings. Saved items and your demo
+        listings stay in this browser when storage is available. Messages,
+        payments, and student verification are not connected.
+      </div>
+    </dialog>
+    <dialog id="detail-dialog" aria-labelledby="detail-title">
+      <button class="close-dialog" aria-label="Close listing">×</button>
+      <div id="detail-content"></div>
+    </dialog>
+    <dialog id="listing-dialog" aria-labelledby="listing-title">
+      <button class="close-dialog" aria-label="Close form">×</button>
+      <p class="eyebrow">MAKE ROOM FOR SOMETHING NEW</p>
+      <h2 id="listing-title">Pass something good on.</h2>
+      <p>
+        Create a demo listing. It stays in this browser and isn't published to a
+        real marketplace.
+      </p>
+      <form id="listing-form">
+        <label
+          >Item name<input
+            name="title"
+            required
+            maxlength="70"
+            placeholder="e.g. A very good study chair"
+        /></label>
+        <div class="form-row">
+          <label
+            >Category<select name="category">
+              <option>Textbooks</option>
+              <option>Furniture</option>
+              <option>Electronics</option>
+              <option>Everyday</option>
+            </select></label
+          ><label
+            >Listing type<select name="mode">
+              <option value="buy">For sale</option>
+              <option value="rent">For rent · per day</option>
+            </select></label
+          >
+        </div>
+        <div class="form-row">
+          <label
+            >Price in USD<input
+              name="price"
+              type="number"
+              min="1"
+              max="10000"
+              step="0.01"
+              required
+              placeholder="25" /></label
+          ><label
+            >Condition<select name="condition">
+              <option>Like new</option>
+              <option>Good</option>
+              <option>Well loved</option>
+            </select></label
+          >
+        </div>
+        <label
+          >Pickup area<select name="location">
+            <option>USC Village</option>
+            <option>Leavey Library</option>
+            <option>Ronald Tutor Campus Center</option>
+          </select></label
+        ><label
+          >Description<textarea
+            name="description"
+            required
+            minlength="10"
+            maxlength="500"
+            rows="3"
+            placeholder="What should its next owner know?"
+          ></textarea>
+        </label>
+        <p class="form-help">
+          A category illustration will be added to your demo listing.
+        </p>
+        <button class="button primary" type="submit">
+          Add demo listing <span aria-hidden="true">↗</span>
+        </button>
+      </form>
+    </dialog>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <noscript
+      ><p class="wrap">
+        Please enable JavaScript to search sample listings and try the
+        interactive marketplace.
+      </p></noscript
+    >
   </body>
 </html>

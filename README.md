@@ -1,48 +1,36 @@
 # Trojan Trade
 
-## Overview
-Trojan Trade is a marketplace web application designed for USC students to buy, sell, and rent items within the campus community. The platform streamlines peer-to-peer exchanges by providing a centralized, user-friendly interface where students can post listings, browse available items, and contact sellers directly.
+A peer-to-peer marketplace concept for USC students to buy, sell, and rent secondhand textbooks, furniture, electronics, and everyday essentials.
 
-This project was developed as an individual project, with the goal of simulating a complete marketplace user flow from item creation to user communication.
+[Open the live demo](https://christinejeong.github.io/trojan-trade/dist/)
 
-## Motivation
-Trojan Trade was created to address the need for a campus-specific marketplace, reducing friction in peer-to-peer exchanges and fostering a more connected student community.
+## Current version
 
-## Features
-* Item listings for buying, selling, and renting
-* Multi-image upload for detailed item posts
-* User profile pages displaying posted items
-* Item detail pages with descriptions and images
-* Contact forms to enable buyer–seller communication
-* End-to-end user flow simulating a real marketplace experience
+The redesigned portfolio demo uses **HTML, CSS, and vanilla JavaScript**. The original React/Vite prototype remains available in Git history.
 
-## TechStack
-### Frontend
-* React Native
-* JavaScript
-* HTML
-* CSS
-### Backend
-* JavaScript
-### Tools
-* Git & Github
+- Responsive cream-and-cardinal design with local assets and fonts
+- Search, categories, buy/rent filters, and price sorting
+- Saved items with rounded heart icons and a count badge
+- Listing details and message previews
+- Create and remove demo listings
+- Browser-local persistence, with an in-memory fallback when storage is unavailable
+- Keyboard-accessible dialogs and reduced-motion styling
 
-## Implementation Details
-Trojan Trade was built with an emphasis on frontend architecture and user experience. The application supports dynamic rendering of listings and images, allowing users to interact with items in a way that mirrors real-world marketplace platforms.
+## Development
 
-Key implementation details include:
-* Structured item posting workflows to capture item details, pricing, and images
-* Multi-image upload handling to enhance listing quality and usability
-* Reusable components for listings, item cards, and profile pages
-* Form validation and testing to ensure smooth user interactions
+No package installation is required. With Python 3, run `python3 -m http.server 5173` from this directory, then open http://localhost:5173. Alternatively, use `npm run dev`.
 
-## Testing & Validation
-* Designed and tested core user flows, including item posting, browsing, and contacting sellers
-* Verified UI behavior across different item states and user interactions
-* Ensured consistency in layout and styling using modular CSS
+The root files are the editable source. `dist/` is a checked-in copy for the existing GitHub Pages URL. After editing, rebuild with Node.js:
 
-## Future Improvements
-* User authentication and account management
-* Search and filter functionality for listings
-* In-app messaging between buyers and sellers
-* Backend integration for persistent data storage
+```sh
+npm run check
+npm run build
+```
+
+Commit source changes and rebuilt `dist/` together. `npm run preview` serves the built version on port 4173 (requires Python 3). Both root and `/dist/` use relative asset paths compatible with GitHub Pages. The portfolio link returns to Christine's portfolio.
+
+## Demo boundaries
+
+Listings and student names are illustrative. New listings stay in the same browser and are not published to other users. Message previews send nothing. There is no backend, account system, student verification, payment processing, or reservation service.
+
+Furniture photos were retained from the original project. Category illustrations are local SVG files. No external image or font service is required.
